@@ -75,7 +75,7 @@ Formula:
 Rho measures the sensitivity of the option price to changes in the risk-free interest rate.
 
 Formula:
-\[ \rho = \frac{V_u - V_d}{2 \cdot \Delta r} \]
+$$ \rho = \frac{V_u - V_d}{2 \cdot \Delta r} $$
 
 
 # Conclusion
