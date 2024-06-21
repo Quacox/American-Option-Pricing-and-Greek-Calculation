@@ -42,31 +42,33 @@ Each of these methods has its advantages and limitations, and the choice of meth
 
 # Option Greeks in Binomial Tree Model
 
-### Delta $\Delta$
+We get 
+
+### Delta : $\Delta$
 
 Delta measures the sensitivity of the option price to changes in the price of the underlying asset.
 
 Formula: $\Delta = \dfrac{V_u - V_d}{S_u - S_d}$
 
-### Gamma $\Gamma$
+### Gamma : $\Gamma$
 
 Gamma measures the rate of change of Delta with respect to changes in the price of the underlying asset.
 
 Formula: $\Gamma = \dfrac{V_u - 2V_c + V_d}{(S_u - S_c)(S_c - S_d)}$
 
-### Theta $\Theta$
+### Theta : $\Theta$
 
 Theta measures the sensitivity of the option price to the passage of time.
 
 Formula: $\Theta = \dfrac{V_u - V_d}{2 \cdot \Delta t}$
 
-### Vega $\nu$
+### Vega : $\nu$
 
 Vega measures the sensitivity of the option price to changes in volatility.
 
 Formula: $\nu = \dfrac{V_u - V_d}{2 \cdot \sigma \sqrt{\Delta t}}$
 
-### Rho  $\rho$
+### Rho : $\rho$
 
 Rho measures the sensitivity of the option price to changes in the risk-free interest rate.
 
