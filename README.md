@@ -62,6 +62,10 @@ Gamma measures the rate of change of Delta with respect to changes in the price 
 
 Formula: $\Gamma = \dfrac{V_u - 2V_c + V_d}{(S_u - S_c)(S_c - S_d)}$
 
+$V_c$ is the option value at the current node.
+
+$S_c$ is the price of the underlying asset at the current node.
+
 ### Theta : $\Theta$
 
 Theta measures the sensitivity of the option price to the passage of time.
