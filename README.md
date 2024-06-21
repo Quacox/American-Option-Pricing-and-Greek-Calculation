@@ -52,6 +52,9 @@ Delta measures the sensitivity of the option price to changes in the price of th
 
 Formula: $\Delta = \dfrac{V_u - V_d}{S_u - S_d}$
 
+$V_u and V_d are the option values at the up and down nodes of the underlying asset price. $
+$S_u and S_d are the prices of the underlying asset at the up and down nodes. $
+
 ### Gamma : $\Gamma$
 
 Gamma measures the rate of change of Delta with respect to changes in the price of the underlying asset.
