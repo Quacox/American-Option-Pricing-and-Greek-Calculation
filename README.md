@@ -46,3 +46,9 @@ This project aims to implement and compare different methods for pricing America
 
 # Contact
 For any questions or further information, please feel free to reach out to me on linkedin : https://www.linkedin.com/in/maxime-le-floch-1ba66a1b1/ or by mail : maximebeguin02@gmail.com.
+
+# Bibliogrphy Use 
+
+https://homepage.ntu.edu.tw/~jryanwang/courses/Financial%20Computation%20or%20Financial%20Engineering%20(graduate%20level)/FE_Ch04%20Binomial%20Tree%20Model.pdf
+https://en.wikipedia.org/wiki/Binomial_options_pricing_model
+https://www.jeroenbouma.com/articles/binomial-trees
