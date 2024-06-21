@@ -46,36 +46,31 @@ Each of these methods has its advantages and limitations, and the choice of meth
 
 Delta measures the sensitivity of the option price to changes in the price of the underlying asset.
 
-Formula: $$\Delta = \frac{V_u - V_d}{S_u - S_d}$$
+Formula: $\Delta = \frac{V_u - V_d}{S_u - S_d}$
 
 ### Gamma (\(\Gamma\))
 
 Gamma measures the rate of change of Delta with respect to changes in the price of the underlying asset.
 
-Formula:
-\[ \Gamma = \frac{V_u - 2V_c + V_d}{(S_u - S_c)(S_c - S_d)} \]
+Formula: $\Gamma = \frac{V_u - 2V_c + V_d}{(S_u - S_c)(S_c - S_d)}$
 
 ### Theta (\(\Theta\))
 
 Theta measures the sensitivity of the option price to the passage of time.
 
-Formula:
-\[ \Theta = \frac{V_u - V_d}{2 \cdot \Delta t} \]
+Formula: $\Theta = \frac{V_u - V_d}{2 \cdot \Delta t}$
 
 ### Vega (\(\nu\))
 
-$\sqrt{3x-1}+(1+x)^2$
-
 Vega measures the sensitivity of the option price to changes in volatility.
 
-Formula:
-\[ \nu = \frac{V_u - V_d}{2 \cdot \sigma \sqrt{\Delta t}} \]
+Formula: $\nu = \frac{V_u - V_d}{2 \cdot \sigma \sqrt{\Delta t}}$
 
 ### Rho (\(\rho\))
 
 Rho measures the sensitivity of the option price to changes in the risk-free interest rate.
 
-Formula: $$ \rho = \frac{V_u - V_d}{2 \cdot \Delta r} $$
+Formula: $\rho = \frac{V_u - V_d}{2 \cdot \Delta r}$
 
 
 # Conclusion
