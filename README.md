@@ -74,7 +74,7 @@ Formula:
 Rho measures the sensitivity of the option price to changes in the risk-free interest rate.
 
 Formula:
-$$ \rho = \frac{V_u - V_d}{2 \cdot \Delta r} $$
+$ \rho = \frac{V_u - V_d}{2 \cdot \Delta r} $
 
 
 # Conclusion
@@ -90,4 +90,4 @@ https://homepage.ntu.edu.tw/~jryanwang/courses/Financial%20Computation%20or%20Fi
 https://en.wikipedia.org/wiki/Binomial_options_pricing_model
 https://www.jeroenbouma.com/articles/binomial-trees
 
-$\sqrt{3x-1}+(1+x)^2$
+
