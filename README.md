@@ -64,6 +64,8 @@ Formula:
 
 ### Vega (\(\nu\))
 
+$\sqrt{3x-1}+(1+x)^2$
+
 Vega measures the sensitivity of the option price to changes in volatility.
 
 Formula:
@@ -73,8 +75,7 @@ Formula:
 
 Rho measures the sensitivity of the option price to changes in the risk-free interest rate.
 
-Formula:
-$ \rho = \frac{V_u - V_d}{2 \cdot \Delta r} $
+Formula: $$ \rho = \frac{V_u - V_d}{2 \cdot \Delta r} $$
 
 
 # Conclusion
