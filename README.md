@@ -89,3 +89,5 @@ For any questions or further information, please feel free to reach out to me on
 https://homepage.ntu.edu.tw/~jryanwang/courses/Financial%20Computation%20or%20Financial%20Engineering%20(graduate%20level)/FE_Ch04%20Binomial%20Tree%20Model.pdf
 https://en.wikipedia.org/wiki/Binomial_options_pricing_model
 https://www.jeroenbouma.com/articles/binomial-trees
+
+$\sqrt{3x-1}+(1+x)^2$
