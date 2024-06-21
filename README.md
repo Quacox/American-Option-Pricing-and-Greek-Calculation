@@ -90,11 +90,7 @@ Formula: $\rho = \dfrac{V_u - V_d}{2 \cdot \Delta r}$
 This project aims to implement and compare different methods for pricing American options using Python. Through this, I hope to deepen my understanding of options pricing and enhance my Python programming skills. Stay tuned for more updates and insights as I progress through this exciting challenge!
 
 ## Contact
-For any questions or further information, please feel free to reach out to me on linkedin :
-
-https://www.linkedin.com/in/maxime-le-floch-1ba66a1b1/ 
-
-or by mail : maximebeguin02@gmail.com.
+For any questions or further information, please feel free to reach out to me on linkedin : https://www.linkedin.com/in/maxime-le-floch-1ba66a1b1/ or by mail : maximebeguin02@gmail.com.
 
 ## Bibliogrphy Use 
 
