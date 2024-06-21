@@ -42,7 +42,7 @@ Each of these methods has its advantages and limitations, and the choice of meth
 
 # Option Greeks in Binomial Tree Model
 
-### Delta (\(\Delta\))
+### Delta (Δ)
 
 Delta measures the sensitivity of the option price to changes in the price of the underlying asset.
 
