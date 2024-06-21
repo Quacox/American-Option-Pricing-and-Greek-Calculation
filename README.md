@@ -46,7 +46,7 @@ Each of these methods has its advantages and limitations, and the choice of meth
 
 Delta measures the sensitivity of the option price to changes in the price of the underlying asset.
 
-Formula: $$ \Δ = \frac{V_u - V_d}{S_u - S_d} $$
+Formula: $$\Delta = \frac{V_u - V_d}{S_u - S_d}$$
 
 ### Gamma (\(\Gamma\))
 
