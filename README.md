@@ -87,6 +87,39 @@ Formula: $\rho = \dfrac{V_u - V_d}{2 \cdot \Delta r}$
 
 # Option Greeks in Monte Carlo Simulation
 
+### Delta : $\Delta$
+
+Delta measures the sensitivity of the option price to changes in the price of the underlying asset.
+
+Formula: $\Delta_{\text{call}} = \frac{V(S_0 + \epsilon) - V(S_0)}{S_0 \cdot \epsilon}$
+
+
+$V_u$ and $V_d$ are the option values at the up and down nodes of the underlying asset price.
+
+$S_u$ and $S_d$ are the prices of the underlying asset at the up and down nodes. 
+
+### Gamma : $\Gamma$
+
+Gamma measures the rate of change of Delta with respect to changes in the price of the underlying asset.
+
+Formula: $\Gamma = \dfrac{V_u - 2V_c + V_d}{(S_u - S_c)(S_c - S_d)}$
+
+$V_c$ is the option value at the current node.
+
+$S_c$ is the price of the underlying asset at the current node.
+
+### Theta : $\Theta$
+
+Theta measures the sensitivity of the option price to the passage of time.
+
+Formula: $\Theta = \dfrac{V_u - V_d}{\Delta t}$
+
+### Vega : $\nu$
+
+Vega measures the sensitivity of the option price to changes in volatility.
+
+Formula: $\nu = \dfrac{V_u - V_d}{2 \cdot \Delta \sigma}$
+
 # Conclusion
 
 This project aims to implement and compare different methods for pricing American options and Greeks Calculations using Python. Through this, I hope to deepen my understanding of options pricing and enhance my Python programming skills. Stay tuned for more updates and insights as I progress through this exciting challenge!
