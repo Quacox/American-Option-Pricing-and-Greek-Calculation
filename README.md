@@ -56,20 +56,20 @@ $p = \frac{e^{r \Delta t} - d}{u - d}$
 
 ### Step 2: Option Payoff Calculation
 
-At maturity$T$, calculate the payoff for each node:
+At maturity $T$ , calculate the payoff for each node:
 
-$\text{Payoff}_{T} = \max(0, \text{strike} - S_T)$for put option
+$\text{Payoff}_{T} = \max(0, \text{strike} - S_T)$ for put option
 
-$\text{Payoff}_{T} = \max(0, S_T - \text{strike})$for call option
+$\text{Payoff}_{T} = \max(0, S_T - \text{strike})$ for call option
 
 
 ### Step 3: Backward Induction for Option Valuation
 
-Start from the nodes at maturity$T$and move backward to$t = 0$:
+Start from the nodes at maturity$T$and move backward to $t = 0$ : 
 
 $V_t = max(Payoff_t, e^{-r \Delta t} (p * V_{t+1}^{u} + q * V_{t+1}^{d}))$
 
-where$V_{t+1}^{u}$and$V_{t+1}^{d}$are the option values at the next time step corresponding to up and down movements, respectively.
+where $V_{t+1}^{u}$ and $V_{t+1}^{d}$ are the option values at the next time step corresponding to up and down movements, respectively.
 
 
 ### Step 4: Calculate Option Price
@@ -134,15 +134,15 @@ where$Z_t \sim \mathcal{N}(0,1)$are independent random variables.
 
 Step 2: Option Payoff Calculation
 
-At each time step$t$, calculate the payoff for each path:
+At each time step $t$ , calculate the payoff for each path:
 $\text{Payoff}_t = \max(0, \text{strike} - S_t)$for put option
 $\text{Payoff}_t = \max(0, S_t - \text{strike})$for call option
 
 Step 3: Backward Induction for Option Valuation
 
-Start from the maturity$T$and move backward to$t = 0$:
+Start from the maturity $T$ and move backward to $t = 0$ :
 $V_t = \max \left( \text{Payoff}_t, \mathbb{E} \left[ e^{-r \Delta t} V_{t+1} \mid \mathcal{F}_t \right] \right)$
-where$\mathcal{F}_t$is the information set at time$t$, and$\mathbb{E}$denotes the expectation.
+where $\mathcal{F}_t$ is the information set at time $t$ , and $\mathbb{E}$ denotes the expectation.
 
 Step 4: Calculate Option Price
 
@@ -155,7 +155,7 @@ $\text{Option Price} = e^{-rT} \mathbb{E}[V_0]$
 
 Delta measures the sensitivity of the option price to changes in the price of the underlying asset.
 
-Formula:$\Delta_{\text{call}} = \frac{V(S_0 + \epsilon) - V(S_0)}{S_0 \cdot \epsilon}$  $\Delta_{\text{put}} = \frac{V(S_0) - V(S_0 - \epsilon)}{S_0 \cdot \epsilon}$
+Formula: $\Delta_{\text{call}} = \frac{V(S_0 + \epsilon) - V(S_0)}{S_0 \cdot \epsilon}$  $\Delta_{\text{put}} = \frac{V(S_0) - V(S_0 - \epsilon)}{S_0 \cdot \epsilon}$
 
 $S_0$ is the Underlying Asset price at the beginning.
 $\epsilon$ is a pertubations in the price. 
