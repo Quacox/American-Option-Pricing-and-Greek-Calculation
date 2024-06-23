@@ -46,11 +46,12 @@ Construct a binomial tree where each node represents a possible future asset pri
 
 Step 1 : Calculate the factors
 
-$\u = e^{\sigma \sqrt{\Delta t}} \$
+$u = e^{\sigma \sqrt{\Delta t}}$
 
-$\d = \frac{1}{u} \$
+$d = \frac{1}{u}$
 
-$\p = \frac{e^{r \Delta t} - d}{u - d} \$
+$p = \frac{e^{r \Delta t} - d}{u - d}$
+
 
 
 Step 2: Option Payoff Calculation
