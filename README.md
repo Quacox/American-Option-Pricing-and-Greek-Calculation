@@ -11,7 +11,7 @@ The first project in this series focuses on a fundamental aspect of market finan
 
 American options are financial derivatives that give the holder the right, but not the obligation, to buy or sell an underlying asset at a specified price (the strike price) before or on a specified expiration date. Unlike European options, which can only be exercised at expiration, American options can be exercised at any time before the expiration date, providing greater flexibility and potential for strategic advantage.
 
-## Key features of American options
+### Key features of American options
 
 Underlying Asset: The asset (stock, bond, commodity, etc.) on which the option is based.
 Strike Price: The price at which the holder can buy (call option) or sell (put option) the underlying asset.
