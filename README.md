@@ -67,7 +67,7 @@ Step 3: Backward Induction for Option Valuation
 
 Start from the nodes at maturity $T$ and move backward to $t = 0$:
 
-V_t = max(Payoff_t, e^{-r \Delta t} (p * V_{t+1}^{u} + q * V_{t+1}^{d}))
+$V_t = max(Payoff_t, e^{-r \Delta t} (p * V_{t+1}^{u} + q * V_{t+1}^{d}))$
 
 where $V_{t+1}^{u}$ and $V_{t+1}^{d}$ are the option values at the next time step corresponding to up and down movements, respectively.
 
