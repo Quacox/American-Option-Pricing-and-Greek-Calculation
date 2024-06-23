@@ -91,33 +91,28 @@ Formula: $\rho = \dfrac{V_u - V_d}{2 \cdot \Delta r}$
 
 Delta measures the sensitivity of the option price to changes in the price of the underlying asset.
 
-Formula: $\Delta_{\text{call}} = \frac{V(S_0 + \epsilon) - V(S_0)}{S_0 \cdot \epsilon}$ -- $\Delta_{\text{put}} = \frac{V(S_0) - V(S_0 - \epsilon)}{S_0 \cdot \epsilon}$
+Formula: $\Delta_{\text{call}} = \frac{V(S_0 + \epsilon) - V(S_0)}{S_0 \cdot \epsilon}$  $\Delta_{\text{put}} = \frac{V(S_0) - V(S_0 - \epsilon)}{S_0 \cdot \epsilon}$
 
-$V_u$ and $V_d$ are the option values at the up and down nodes of the underlying asset price.
-
-$S_u$ and $S_d$ are the prices of the underlying asset at the up and down nodes. 
+$S_0$ is the Underlying Asset price at the beginning.
+$\epsilon$ is a pertubations in the price. 
 
 ### Gamma : $\Gamma$
 
 Gamma measures the rate of change of Delta with respect to changes in the price of the underlying asset.
 
-Formula: $\Gamma = \dfrac{V_u - 2V_c + V_d}{(S_u - S_c)(S_c - S_d)}$
-
-$V_c$ is the option value at the current node.
-
-$S_c$ is the price of the underlying asset at the current node.
+Formula: $\Gamma_{\text{call}} = \frac{V(S_0 + \epsilon) - 2V(S_0) + V(S_0 - \epsilon)}{S_0^2 \cdot \epsilon^2}$  $\Gamma_{\text{put}} = \frac{V(S_0 + \epsilon) - 2V(S_0) + V(S_0 - \epsilon)}{S_0^2 \cdot \epsilon^2}$
 
 ### Theta : $\Theta$
 
 Theta measures the sensitivity of the option price to the passage of time.
 
-Formula: $\Theta = \dfrac{V_u - V_d}{\Delta t}$
+Formula: $\Theta = \frac{V(t + \Delta t) - V(t)}{\Delta t}$
 
 ### Vega : $\nu$
 
 Vega measures the sensitivity of the option price to changes in volatility.
 
-Formula: $\nu = \dfrac{V_u - V_d}{2 \cdot \Delta \sigma}$
+Formula: $\text{Vega}_{\text{call}} = \epsilon \left[ V(S_0, \sigma + \epsilon) - V(S_0, \sigma) \right]$  $\text{Vega}_{\text{put}} = \epsilon \left[ V(S_0, \sigma + \epsilon) - V(S_0, \sigma) \right]$
 
 # Conclusion
 
