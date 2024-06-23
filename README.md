@@ -128,13 +128,14 @@ Formula: $\rho = \dfrac{V_u - V_d}{2 \cdot \Delta r}$
 ### Step 1: Asset Price Simulation
 
 Simulate $M$ paths of the underlying asset price $S_t$ over $N$ discrete time steps.
+
 Use GBM to model asset price evolution:
 
 $S_{t+1} = S_t \exp \left( \left( r - \frac{1}{2} \sigma^2 \right) \Delta t + \sigma \sqrt{\Delta t} \cdot Z_t \right)$
 
 where $Z_t \sim \mathcal{N}(0,1)$ are independent random variables.
 
-Step 2: Option Payoff Calculation
+### Step 2: Option Payoff Calculation
 
 At each time step $t$ , calculate the payoff for each path:
 
@@ -142,7 +143,7 @@ $\text{Payoff}_t = \max(0, \text{strike} - S_t)$ for put option
 
 $\text{Payoff}_t = \max(0, S_t - \text{strike})$ for call option
 
-Step 3: Backward Induction for Option Valuation
+### Step 3: Backward Induction for Option Valuation
 
 Start from the maturity $T$ and move backward to $t = 0$ :
 
@@ -150,7 +151,7 @@ $V_t = \max \left( \text{Payoff}_t, \mathbb{E} \left[ e^{-r \Delta t} V_{t+1} \m
 
 where $\mathcal{F}_t$ is the information set at time $t$ , and $\mathbb{E}$ denotes the expectation.
 
-Step 4: Calculate Option Price
+### Step 4: Calculate Option Price
 
 The American option price is typically the discounted expected value of the option payoff:
 $\text{Option Price} = e^{-rT} \mathbb{E}[V_0]$
