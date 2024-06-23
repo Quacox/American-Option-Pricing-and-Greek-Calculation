@@ -70,19 +70,20 @@ $S_c$ is the price of the underlying asset at the current node.
 
 Theta measures the sensitivity of the option price to the passage of time.
 
-Formula: $\Theta = \dfrac{V_u - V_d}{2 \cdot \Delta t}$
+Formula: $\Theta = \dfrac{V_u - V_d}{\Delta t}$
 
 ### Vega : $\nu$
 
 Vega measures the sensitivity of the option price to changes in volatility.
 
-Formula: $\nu = \dfrac{V_u - V_d}{2 \cdot \sigma \sqrt{\Delta t}}$
+Formula: $\nu = \dfrac{V_u - V_d}{\sigma \sqrt{\Delta t}}$
 
 ### Rho : $\rho$
 
 Rho measures the sensitivity of the option price to changes in the risk-free interest rate.
 
-Formula: $\rho = \dfrac{V_u - V_d}{2 \cdot \Delta r}$
+Formula: $\rho = \dfrac{V_u - V_d}{\Delta r}$
+
 
 
 # Conclusion
