@@ -44,7 +44,7 @@ Each of these methods has its advantages and limitations, and the choice of meth
 
 Construct a binomial tree where each node represents a possible future asset price at each time step.
 
-Step 1 : Calculate the factors
+Step 1 : Calculate factors
 
 $\Delta t = \frac{T}{N}$
 
@@ -58,8 +58,10 @@ $p = \frac{e^{r \Delta t} - d}{u - d}$
 
 Step 2: Option Payoff Calculation
 
-At maturity $ T $, calculate the payoff for each node:
+At maturity T , calculate the payoff for each node:
+
 $ \text{Payoff}_{T} = \max(0, \text{strike} - S_T) $ for put option
+
 $ \text{Payoff}_{T} = \max(0, S_T - \text{strike}) $ for call option
 
 
