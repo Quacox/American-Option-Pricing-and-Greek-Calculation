@@ -42,13 +42,10 @@ Each of these methods has its advantages and limitations, and the choice of meth
 
 # Binomial Tree Model
 
-Divide the time to maturity \( T \) into \( N \) discrete time steps.
 Construct a binomial tree where each node represents a possible future asset price at each time step.
-Calculate the up and down factors:
-\[ u = e^{\sigma \sqrt{\Delta t}} \]
+Step 1 : Calculate the factors:
+$\[ u = e^{\sigma \sqrt{\Delta t}} \]$
 \[ d = \frac{1}{u} \]
-
-Compute the risk-neutral probabilities:
 \[ p = \frac{e^{r \Delta t} - d}{u - d} \]
 
 
