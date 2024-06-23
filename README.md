@@ -54,7 +54,7 @@ $d = \frac{1}{u}$
 
 $p = \frac{e^{r \Delta t} - d}{u - d}$
 
-
+\\
 
 Step 2: Option Payoff Calculation
 
