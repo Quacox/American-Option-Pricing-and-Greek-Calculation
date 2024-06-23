@@ -58,7 +58,7 @@ $p = \frac{e^{r \Delta t} - d}{u - d}$
 
 Step 2: Option Payoff Calculation
 
-At maturity T , calculate the payoff for each node:
+At maturity $T$, calculate the payoff for each node:
 
 $\text{Payoff}_{T} = \max(0, \text{strike} - S_T)$ for put option
 
@@ -67,9 +67,10 @@ $\text{Payoff}_{T} = \max(0, S_T - \text{strike})$ for call option
 
 Step 3: Backward Induction for Option Valuation
 
-Start from the nodes at maturity \( T \) and move backward to \( t = 0 \):
-\[ V_t = \max(\text{Payoff}_{t}, e^{-r\Delta t} (p \cdot V_{t+1}^{u} + q \cdot V_{t+1}^{d})) \]
-where \( V_{t+1}^{u} \) and \( V_{t+1}^{d} \) are the option values at the next time step corresponding to up and down movements, respectively.
+Start from the nodes at maturity $T$ and move backward to $t = 0$:
+$V_t = \max(\text{Payoff}_{t}, e^{-r\Delta t} (p \cdot V_{t+1}^{u} + q \cdot V_{t+1}^{d}))$
+where $V_{t+1}^{u} $ and $ V_{t+1}^{d}$ are the option values at the next time step corresponding to up and down movements, respectively.
+
 
 Step 4: Calculate Option Price
 
