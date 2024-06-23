@@ -40,6 +40,36 @@ Black-Scholes-Merton Model:
 While primarily used for European options, the Black-Scholes-Merton model can be adapted for American options with certain approximations or modifications.
 Each of these methods has its advantages and limitations, and the choice of method can depend on factors such as the desired accuracy, computational resources, and the specific characteristics of the option being priced.
 
+# Binomial Tree Model
+
+Divide the time to maturity \( T \) into \( N \) discrete time steps.
+Construct a binomial tree where each node represents a possible future asset price at each time step.
+Calculate the up and down factors:
+\[ u = e^{\sigma \sqrt{\Delta t}} \]
+\[ d = \frac{1}{u} \]
+
+Compute the risk-neutral probabilities:
+\[ p = \frac{e^{r \Delta t} - d}{u - d} \]
+
+
+Step 2: Option Payoff Calculation
+
+At maturity \( T \), calculate the payoff for each node:
+\[ \text{Payoff}_{T} = \max(0, \text{strike} - S_T) \quad \text{for put option} \]
+\[ \text{Payoff}_{T} = \max(0, S_T - \text{strike}) \quad \text{for call option} \]
+
+Step 3: Backward Induction for Option Valuation
+
+Start from the nodes at maturity \( T \) and move backward to \( t = 0 \):
+\[ V_t = \max(\text{Payoff}_{t}, e^{-r\Delta t} (p \cdot V_{t+1}^{u} + q \cdot V_{t+1}^{d})) \]
+where \( V_{t+1}^{u} \) and \( V_{t+1}^{d} \) are the option values at the next time step corresponding to up and down movements, respectively.
+
+Step 4: Calculate Option Price
+
+The American option price is typically the value at the root of the binomial tree:
+\[ \text{Option Price} = V_0 \]
+
+
 # Option Greeks in Binomial Tree Model
 
 Understanding the Greeks of options is essential for effectively managing and pricing these financial instruments. In the context of the binomial tree model, the Greeks provide valuable insights into how the price of an option reacts to changes in different factors such as the underlying asset's price, time decay, volatility, and interest rates.
