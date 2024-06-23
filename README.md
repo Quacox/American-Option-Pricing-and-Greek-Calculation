@@ -76,13 +76,13 @@ Formula: $\Theta = \dfrac{V_u - V_d}{\Delta t}$
 
 Vega measures the sensitivity of the option price to changes in volatility.
 
-Formula: $\nu = \dfrac{V_u - V_d}{\sigma \sqrt{\Delta t}}$
+Formula: $\nu = \dfrac{V_u - V_d}{2 \cdot \sqrt{\sigma}}$
 
 ### Rho : $\rho$
 
 Rho measures the sensitivity of the option price to changes in the risk-free interest rate.
 
-Formula: $\rho = \dfrac{V_u - V_d}{\Delta r}$
+Formula: $\rho = \dfrac{V_u - V_d}{2 \cdot \Delta r}$
 
 
 
