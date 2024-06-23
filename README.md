@@ -1,4 +1,4 @@
-a# American-Option-Pricing-and-Greek-Calculation
+# American-Option-Pricing-and-Greek-Calculation
 
 # Overview
 
@@ -44,7 +44,7 @@ Each of these methods has its advantages and limitations, and the choice of meth
 
 Construct a binomial tree where each node represents a possible future asset price at each time step.
 
-\underline{Step 1: Calculate factors} \\
+Step 1: Calculate factors
 
 $\Delta t = \frac{T}{N}$
 
@@ -67,8 +67,7 @@ Step 3: Backward Induction for Option Valuation
 
 Start from the nodes at maturity $T$ and move backward to $t = 0$:
 
-$ V_t = \max(\text{Payoff}_{t}, e^{-r \Delta t} (p \cdot V_{t+1}^{u} + q \cdot V_{t+1}^{d})) $
-
+$V_t = \max(\text{Payoff}_{t}, e^{-r \Delta t} (p \cdot V_{t+1}^{u} + q \cdot V_{t+1}^{d}))$
 
 where $V_{t+1}^{u}$ and $V_{t+1}^{d}$ are the option values at the next time step corresponding to up and down movements, respectively.
 
