@@ -78,7 +78,7 @@ where $V_{t+1}^{u}$ and $V_{t+1}^{d}$ are the option values at the next time ste
 Step 4: Calculate Option Price
 
 The American option price is typically the value at the root of the binomial tree:
-\[ \text{Option Price} = V_0 \]
+$\text{Option Price} = V_0 \$
 
 
 # Option Greeks in Binomial Tree Model
