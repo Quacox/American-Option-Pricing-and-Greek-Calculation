@@ -112,8 +112,7 @@ Formula: $\Theta = \frac{V(t + \Delta t) - V(t)}{\Delta t}$
 
 Vega measures the sensitivity of the option price to changes in volatility.
 
-Formula: $\Vega_{\text{call}} = \frac{V(S_0, \sigma + \epsilon) - V(S_0, \sigma)}{\epsilon}$
-  $\text{Vega}_{\text{put}} = \epsilon \left[ V(S_0, \sigma + \epsilon) - V(S_0, \sigma) \right]$
+Formula: $\nu_{\text{call}} = \frac{V(S_0, \sigma + \epsilon) - V(S_0, \sigma)}{\epsilon}$  $\nu_{\text{call}} = \frac{V(S_0, \sigma + \epsilon) - V(S_0, \sigma)}{\epsilon}$
 
 ### Rho : $\rho$
 
