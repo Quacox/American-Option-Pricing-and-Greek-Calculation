@@ -60,9 +60,9 @@ Step 2: Option Payoff Calculation
 
 At maturity T , calculate the payoff for each node:
 
-$ \text{Payoff}_{T} = \max(0, \text{strike} - S_T) $ for put option
+$\text{Payoff}_{T} = \max(0, \text{strike} - S_T)$ for put option
 
-$ \text{Payoff}_{T} = \max(0, S_T - \text{strike}) $ for call option
+$\text{Payoff}_{T} = \max(0, S_T - \text{strike})$ for call option
 
 
 Step 3: Backward Induction for Option Valuation
