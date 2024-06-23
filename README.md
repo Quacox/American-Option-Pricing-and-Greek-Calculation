@@ -44,7 +44,7 @@ Each of these methods has its advantages and limitations, and the choice of meth
 
 Construct a binomial tree where each node represents a possible future asset price at each time step.
 
-Step 1: Calculate factors
+### Step 1: Calculate factors
 
 $\Delta t = \frac{T}{N}$
 
@@ -54,25 +54,25 @@ $d = \frac{1}{u}$
 
 $p = \frac{e^{r \Delta t} - d}{u - d}$
 
-Step 2: Option Payoff Calculation
+### Step 2: Option Payoff Calculation
 
-At maturity $T$, calculate the payoff for each node:
+At maturity$T$, calculate the payoff for each node:
 
-$\text{Payoff}_{T} = \max(0, \text{strike} - S_T)$ for put option
+$\text{Payoff}_{T} = \max(0, \text{strike} - S_T)$for put option
 
-$\text{Payoff}_{T} = \max(0, S_T - \text{strike})$ for call option
+$\text{Payoff}_{T} = \max(0, S_T - \text{strike})$for call option
 
 
-Step 3: Backward Induction for Option Valuation
+### Step 3: Backward Induction for Option Valuation
 
-Start from the nodes at maturity $T$ and move backward to $t = 0$:
+Start from the nodes at maturity$T$and move backward to$t = 0$:
 
 $V_t = max(Payoff_t, e^{-r \Delta t} (p * V_{t+1}^{u} + q * V_{t+1}^{d}))$
 
-where $V_{t+1}^{u}$ and $V_{t+1}^{d}$ are the option values at the next time step corresponding to up and down movements, respectively.
+where$V_{t+1}^{u}$and$V_{t+1}^{d}$are the option values at the next time step corresponding to up and down movements, respectively.
 
 
-Step 4: Calculate Option Price
+### Step 4: Calculate Option Price
 
 The American option price is typically the value at the root of the binomial tree:
 $\text{Option Price} = V_0 \$
@@ -84,79 +84,105 @@ Understanding the Greeks of options is essential for effectively managing and pr
 
 By analyzing the Greeks, traders can make informed decisions regarding hedging strategies, portfolio risk management, and trading tactics.
 
-### Delta : $\Delta$
+### Delta :$\Delta$
 
 Delta measures the sensitivity of the option price to changes in the price of the underlying asset.
 
-Formula: $\Delta = \dfrac{V_u - V_d}{S_u - S_d}$ 
+Formula:$\Delta = \dfrac{V_u - V_d}{S_u - S_d}$
 
-$V_u$ and $V_d$ are the option values at the up and down nodes of the underlying asset price.
+$V_u$and$V_d$are the option values at the up and down nodes of the underlying asset price.
 
-$S_u$ and $S_d$ are the prices of the underlying asset at the up and down nodes. 
+$S_u$and$S_d$are the prices of the underlying asset at the up and down nodes. 
 
-### Gamma : $\Gamma$
+### Gamma :$\Gamma$
 
 Gamma measures the rate of change of Delta with respect to changes in the price of the underlying asset.
 
-Formula: $\Gamma = \dfrac{V_u - 2V_c + V_d}{(S_u - S_c)(S_c - S_d)}$
+Formula:$\Gamma = \dfrac{V_u - 2V_c + V_d}{(S_u - S_c)(S_c - S_d)}$
 
-$V_c$ is the option value at the current node.
+$V_c$is the option value at the current node.
 
-$S_c$ is the price of the underlying asset at the current node.
+$S_c$is the price of the underlying asset at the current node.
 
-### Theta : $\Theta$
+### Theta :$\Theta$
 
 Theta measures the sensitivity of the option price to the passage of time.
 
-Formula: $\Theta = \dfrac{V_u - V_d}{\Delta t}$
+Formula:$\Theta = \dfrac{V_u - V_d}{\Delta t}$
 
-### Vega : $\nu$
+### Vega :$\nu$
 
 Vega measures the sensitivity of the option price to changes in volatility.
 
-Formula: $\nu = \dfrac{V_u - V_d}{2 \cdot \Delta \sigma}$
+Formula:$\nu = \dfrac{V_u - V_d}{2 \cdot \Delta \sigma}$
 
 
-### Rho : $\rho$
+### Rho :$\rho$
 
 Rho measures the sensitivity of the option price to changes in the risk-free interest rate.
 
-Formula: $\rho = \dfrac{V_u - V_d}{2 \cdot \Delta r}$
+Formula:$\rho = \dfrac{V_u - V_d}{2 \cdot \Delta r}$
+
+# Monte Carlo Simulation
+
+### Step 1: Asset Price Simulation
+
+Simulate$M$paths of the underlying asset price$S_t$over$N$discrete time steps.
+Use GBM to model asset price evolution:
+$S_{t+1} = S_t \exp \left( \left( r - \frac{1}{2} \sigma^2 \right) \Delta t + \sigma \sqrt{\Delta t} \cdot Z_t \right)$
+where$Z_t \sim \mathcal{N}(0,1)$are independent random variables.
+
+Step 2: Option Payoff Calculation
+
+At each time step$t$, calculate the payoff for each path:
+$\text{Payoff}_t = \max(0, \text{strike} - S_t)$for put option
+$\text{Payoff}_t = \max(0, S_t - \text{strike})$for call option
+
+Step 3: Backward Induction for Option Valuation
+
+Start from the maturity$T$and move backward to$t = 0$:
+$V_t = \max \left( \text{Payoff}_t, \mathbb{E} \left[ e^{-r \Delta t} V_{t+1} \mid \mathcal{F}_t \right] \right)$
+where$\mathcal{F}_t$is the information set at time$t$, and$\mathbb{E}$denotes the expectation.
+
+Step 4: Calculate Option Price
+
+The American option price is typically the discounted expected value of the option payoff:
+$\text{Option Price} = e^{-rT} \mathbb{E}[V_0]$
 
 # Option Greeks in Monte Carlo Simulation
 
-### Delta : $\Delta$
+### Delta :$\Delta$
 
 Delta measures the sensitivity of the option price to changes in the price of the underlying asset.
 
-Formula: $\Delta_{\text{call}} = \frac{V(S_0 + \epsilon) - V(S_0)}{S_0 \cdot \epsilon}$  $\Delta_{\text{put}} = \frac{V(S_0) - V(S_0 - \epsilon)}{S_0 \cdot \epsilon}$
+Formula:$\Delta_{\text{call}} = \frac{V(S_0 + \epsilon) - V(S_0)}{S_0 \cdot \epsilon}$$\Delta_{\text{put}} = \frac{V(S_0) - V(S_0 - \epsilon)}{S_0 \cdot \epsilon}$
 
-$S_0$ is the Underlying Asset price at the beginning.
-$\epsilon$ is a pertubations in the price. 
+$S_0$is the Underlying Asset price at the beginning.
+$\epsilon$is a pertubations in the price. 
 
-### Gamma : $\Gamma$
+### Gamma :$\Gamma$
 
 Gamma measures the rate of change of Delta with respect to changes in the price of the underlying asset.
 
-Formula: $\Gamma_{\text{call}} = \frac{V(S_0 + \epsilon) - 2V(S_0) + V(S_0 - \epsilon)}{S_0^2 \cdot \epsilon^2}$  $\Gamma_{\text{put}} = \frac{V(S_0 + \epsilon) - 2V(S_0) + V(S_0 - \epsilon)}{S_0^2 \cdot \epsilon^2}$
+Formula:$\Gamma_{\text{call}} = \frac{V(S_0 + \epsilon) - 2V(S_0) + V(S_0 - \epsilon)}{S_0^2 \cdot \epsilon^2}$$\Gamma_{\text{put}} = \frac{V(S_0 + \epsilon) - 2V(S_0) + V(S_0 - \epsilon)}{S_0^2 \cdot \epsilon^2}$
 
-### Theta : $\Theta$
+### Theta :$\Theta$
 
 Theta measures the sensitivity of the option price to the passage of time.
 
-Formula: $\Theta = \frac{V(t + \Delta t) - V(t)}{\Delta t}$
+Formula:$\Theta = \frac{V(t + \Delta t) - V(t)}{\Delta t}$
 
-### Vega : $\nu$
+### Vega :$\nu$
 
 Vega measures the sensitivity of the option price to changes in volatility.
 
-Formula: $\nu_{\text{call}} = \frac{V(S_0, \sigma + \epsilon) - V(S_0, \sigma)}{\epsilon}$   $\nu_{\text{call}} = \frac{V(S_0, \sigma + \epsilon) - V(S_0, \sigma)}{\epsilon}$
+Formula:$\nu_{\text{call}} = \frac{V(S_0, \sigma + \epsilon) - V(S_0, \sigma)}{\epsilon}$ $\nu_{\text{call}} = \frac{V(S_0, \sigma + \epsilon) - V(S_0, \sigma)}{\epsilon}$
 
-### Rho : $\rho$
+### Rho :$\rho$
 
 Rho measures the sensitivity of the option price to changes in the risk-free interest rate.
 
-Formula: $\text{Rho} = T \cdot \epsilon \left[ V(S_0, r + \epsilon) - V(S_0, r) \right]$
+Formula:$\text{Rho} = T \cdot \epsilon \left[ V(S_0, r + \epsilon) - V(S_0, r) \right]$
 
 # Conclusion
 
