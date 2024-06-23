@@ -50,7 +50,7 @@ By analyzing the Greeks, traders can make informed decisions regarding hedging s
 
 Delta measures the sensitivity of the option price to changes in the price of the underlying asset.
 
-Formula: $\Delta = \dfrac{V_u - V_d}{S_u - S_d}$
+Formula: $\Delta = \dfrac{V_u - V_d}{S_u - S_d}$ -- $\Delta_{\text{put}} = \frac{V(S_0) - V(S_0 - \epsilon)}{S_0 \cdot \epsilon}$
 
 $V_u$ and $V_d$ are the option values at the up and down nodes of the underlying asset price.
 
