@@ -18,11 +18,11 @@ Strike Price: The price at which the holder can buy (call option) or sell (put o
 Expiration Date: The last date on which the option can be exercised.
 Exercise: The act of buying or selling the underlying asset at the strike price.
 
-## American Options Pricing : 
+# American Options Pricing : 
 
 Pricing American options is more complex than pricing European options due to the flexibility of early exercise. Several methods can be used to determine the fair value of an American option:
 
-### Binomial Tree Model
+## Binomial Tree Model
 
 This model involves creating a tree of possible future prices for the underlying asset and evaluating the option at each node.
 The tree accounts for the possibility of early exercise by comparing the immediate payoff with the expected value of holding the option.
@@ -31,7 +31,7 @@ Finite Difference Methods:
 These numerical methods solve the partial differential equations (PDEs) governing the option's price.
 The early exercise feature is incorporated by adjusting the boundary conditions of the PDEs.
 
-### Monte Carlo Simulation
+## Monte Carlo Simulation
 
 This method uses random sampling to simulate a large number of possible price paths for the underlying asset.
 The option's value is estimated by averaging the payoffs of the simulated paths, considering the possibility of early exercise.
@@ -85,6 +85,7 @@ Rho measures the sensitivity of the option price to changes in the risk-free int
 
 Formula: $\rho = \dfrac{V_u - V_d}{2 \cdot \Delta r}$
 
+# Option Greeks in Monte Carlo Simulation
 
 # Conclusion
 
