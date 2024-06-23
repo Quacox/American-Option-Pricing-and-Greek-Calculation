@@ -46,6 +46,8 @@ Construct a binomial tree where each node represents a possible future asset pri
 
 Step 1 : Calculate the factors
 
+$\Delta t = \frac{T}{N}$
+
 $u = e^{\sigma \sqrt{\Delta t}}$
 
 $d = \frac{1}{u}$
