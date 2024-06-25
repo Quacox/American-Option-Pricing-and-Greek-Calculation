@@ -149,7 +149,7 @@ Start from the maturity $T$ and move backward to $t = 0$ :
 
 $V_t = max(Payoff_t, e^{-r \Delta t} (p * V_{t+1}^{u} + q * V_{t+1}^{d}))$
 
-$V_t = max(\text{Payoff}_t , \mathbb{E} (e^{-r \Delta t} V_{t+1}) $
+$V_t = max({Payoff}_t , E (e^{-r \Delta t} V_{t+1}) $
 $V_t = \max \left( \text{Payoff}_t, \mathbb{E} e^{-r \Delta t} V_{t+1} \right)$
 
 where $\mathcal{F}_t$ is the information set at time $t$ , and $\mathbb{E}$ denotes the expectation.
