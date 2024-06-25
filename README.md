@@ -147,8 +147,7 @@ $\text{Payoff}_t = \max(0, S_t - \text{strike})$ for call option
 
 Start from the maturity $T$ and move backward to $t = 0$ :
 
-$V_t = max(Payoff_t , \mathbb{E} (e^{-r \Delta t} V_{t+1}) $
-$V_t = \max \left(Payoff_t, \mathbb{E} e^{-r \Delta t} V_{t+1} \right)$
+$V_t = max(Payoff_t , \mathbb{E} (e^{-r \Delta t} V_{t+1}|\mathcal{F}_t) $
 
 where $\mathcal{F}_t$ is the information set at time $t$ , and $\mathbb{E}$ denotes the expectation.
 
