@@ -196,7 +196,8 @@ Formula: $\text{Rho} = T \cdot \epsilon \left[ V(S_0, r + \epsilon) - V(S_0, r) 
 This project aims to implement and compare different methods for pricing American options and Greeks Calculations using Python. Through this, I hope to deepen my understanding of options pricing and enhance my Python programming skills. Stay tuned for more updates and insights as I progress through this exciting challenge!
 
 ## Contact
-For any questions or further information, please feel free to reach out to me on linkedin : https://www.linkedin.com/in/maxime-le-floch-1ba66a1b1/ or by mail : maximebeguin02@gmail.com.
+
+For any questions or further information, please feel free to reach out to me on [LinkedIn :](https://www.linkedin.com/in/maxime-le-floch-1ba66a1b1/) or by mail : [Maxime Le Floch](mailto:maximebeguin02@gmail.com?subject=[GitHub]%20Source%20Han%20Sans) .
 
 
 ## Bibliography Use 
